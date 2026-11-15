@@ -1,5 +1,5 @@
 // Backend URL comes from Vite env so the same build logic works locally and in production.
-export const BACKEND_URL = (import.meta.env.VITE_BACKEND_URL || 'http://localhost:5000').replace(/\/$/, '');
+export const BACKEND_URL = (import.meta.env.VITE_API_URL || 'http://localhost:5000').replace(/\/$/, '');
 
 /**
  * ICE servers for RTCPeerConnection.
