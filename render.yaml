@@ -1,0 +1,17 @@
+# Optional Render Blueprint: New + > Blueprint, point at your repo.
+services:
+  - type: web
+    name: aether-server
+    runtime: node
+    rootDir: server
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /health
+    plan: free
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: MONGODB_URI
+        sync: false   # paste your Atlas connection string in the dashboard
+      - key: CLIENT_URL
+        sync: false   # e.g. https://aether.vercel.app (comma-separate several)
